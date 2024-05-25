@@ -1,8 +1,13 @@
 import React from 'react'
+import Hero from '@/components/Hero'
+import InfoBoxes from '@/components/InfoBoxes'
 
 const Homepage = () => {
   return (
-    <div>Homepage</div>
+    <>
+      <Hero />
+      <InfoBoxes />
+    </>
   )
 }
 
