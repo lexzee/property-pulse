@@ -20,7 +20,7 @@ const HomeProperty = () => {
             ) : (
               recentProperties.map(property => (
                 <PropertyCard
-                  key={recentProperties._id}
+                  key={property._id}
                   property={property}
                 />
               ))
