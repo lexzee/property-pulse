@@ -1,8 +1,10 @@
-import properties from "@/properties.json"
+import { fetchProperties } from "@/utils/requests"
 import PropertyCard from "./PropertyCard"
 import Link from "next/link"
 
-const HomeProperty = () => {
+const HomeProperty = async () => {
+  const properties = await fetchProperties()
+
   const recentProperties = properties
     .sort(()=> Math.random() - Math.random())
     .slice(0, 3)
