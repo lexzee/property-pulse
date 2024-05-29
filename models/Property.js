@@ -62,15 +62,12 @@ const PropertySchema = new Schema({
   seller_info: {
     name: {
       type: String,
-      // required: true
     },
     email: {
       type: String,
-      // required: true
     },
     phone: {
       type: String,
-      // required: true
     },
   },
   images: [
