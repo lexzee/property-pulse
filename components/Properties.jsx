@@ -15,6 +15,17 @@ const Properties = () => {
       try {
         const properties = await fetchProperties();
         setProperties(properties)
+        // const res = await fetch(
+        //   `api/properties`
+        // );
+
+        // if (!res.ok){
+        //   throw new Error('failed to fetch data')
+        // }
+
+        // const properties = await res.json()
+        setProperties(properties)
+        console.log(`Properties:`, properties);
       } catch (error) {
         console.error("Error fetching properties: ", error);
       } finally {

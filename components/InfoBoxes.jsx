@@ -10,7 +10,7 @@ const InfoBoxes = () => {
             backgroundColor="bg-gray-100"
             textColor="white"
             buttonInfo={{
-              link: '/properties.html',
+              link: '/properties',
               backgroundColor: 'bg-black',
               text: 'Browse Properties'
             }}
@@ -22,7 +22,7 @@ const InfoBoxes = () => {
             backgroundColor="bg-blue-100"
             textColor="white"
             buttonInfo={{
-              link: '/properties/add.html',
+              link: '/properties/add',
               backgroundColor: 'bg-blue-500',
               text: 'Add Property'
             }}
