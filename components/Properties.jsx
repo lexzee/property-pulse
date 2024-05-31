@@ -25,7 +25,6 @@ const Properties = () => {
 
         // const properties = await res.json()
         setProperties(properties)
-        console.log(`Properties:`, properties);
       } catch (error) {
         console.error("Error fetching properties: ", error);
       } finally {
