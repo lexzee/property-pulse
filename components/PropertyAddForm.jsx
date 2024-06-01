@@ -3,30 +3,29 @@ import { useState } from "react";
 
 const PropertyAddForm = () => {
   const [fields, setFields] = useState({
-    type: "Apartment",
-    name: "Test prop",
+    type: "",
+    name: "",
     description: "",
     location: {
       street: "",
-      city: "Text city",
-      state: "test state",
+      city: "",
+      state: "",
       zipcode: "",
     },
-    beds: "3",
-    baths: "2",
-    square_feet: "1800",
-    amenities: ["Wifi"],
+    beds: "",
+    baths: "",
+    square_feet: "",
+    amenities: [],
     rates: {
       weekly: "",
-      monthly: "2000",
+      monthly: "",
       nightly: "",
     },
     seller_info: {
-      name: "Brad",
-      email: "test@test.com",
+      name: "",
+      email: "",
       phone: "",
     },
-    images: [],
   });
 
   const handleChange = (e) => {
@@ -334,7 +333,7 @@ const PropertyAddForm = () => {
               name="amenities"
               value="Wheelchair Accessible"
               className="mr-2"
-              checked={fields.amenities.includes("Wheelchair Acessible")}
+              checked={fields.amenities.includes("Wheelchair Accessible")}
               onChange={handleAmenitiesChange}
             />
             <label htmlFor="amenity_wheelchair_accessible">
@@ -426,6 +425,44 @@ const PropertyAddForm = () => {
               onChange={handleAmenitiesChange}
             />
             <label htmlFor="amenity_coffee_maker">Coffee Maker</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="amenity_high_speed_internet"
+              name="amenities"
+              value="High-Speed Internet"
+              className="mr-2"
+              checked={fields.amenities.includes("High-Speed Internet")}
+              onChange={handleAmenitiesChange}
+            />
+            <label htmlFor="amenity_high_speed_internet">
+              High-Speed Internet
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="amenity_outdoor_grill_bbq"
+              name="amenities"
+              value="Outdoor Grill/BBQ"
+              className="mr-2"
+              checked={fields.amenities.includes("Outdoor Grill/BBQ")}
+              onChange={handleAmenitiesChange}
+            />
+            <label htmlFor="amenity_outdoor_grill_bbq">Outdoor Grill/BBQ</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="amenity_fireplace"
+              name="amenities"
+              value="Fireplace"
+              className="mr-2"
+              checked={fields.amenities.includes("Fireplace")}
+              onChange={handleAmenitiesChange}
+            />
+            <label htmlFor="amenity_fireplace">Fireplace</label>
           </div>
         </div>
       </div>
@@ -542,6 +579,7 @@ const PropertyAddForm = () => {
           accept="image/*"
           multiple
           onChange={handleImageChange}
+          required
         />
       </div>
 
